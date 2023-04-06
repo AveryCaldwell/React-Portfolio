@@ -1,32 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
 import App from './App';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
+import theme from '../src/theme';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <ThemeProvider theme={theme}>
+            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+            <CssBaseline />
+            <App />
+            document.getElementById('root')
+        </ThemeProvider>
     </React.StrictMode>
-);
-
-export default function MyApp() {
-    return (
-        <div>
-            <Button variant='contained'>Hello World</Button>
-        </div>
-    );
-}
-root.render(
-    <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        <App />
-    </ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
