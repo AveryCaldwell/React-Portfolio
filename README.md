@@ -103,7 +103,7 @@ TODO: UPDATE
 ###  Built with 🔨
 - JavaScript
 - GitHub, Github Pages
-- React
+- React, MUI
 
 <br>
 
