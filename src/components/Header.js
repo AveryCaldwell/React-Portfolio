@@ -88,7 +88,7 @@ function Header({ setCurrentPage, currentPage }) {
     return (
         <header className='header'>
             <Material.Box sx={{ flexGrow: 1 }}>
-                <Material.AppBar position='static'>
+                <Material.AppBar position='fixed'>
                     <Material.Toolbar>
                         {/* <HeaderMenu /> */}
                         <Material.Typography
@@ -100,15 +100,15 @@ function Header({ setCurrentPage, currentPage }) {
                         </Material.Typography>
                         <Material.Button
                             color='inherit'
-                            onClick={() => setCurrentPage('Home')}
+                            onClick={() => setCurrentPage('About')}
                         >
-                            Home
+                            About Me
                         </Material.Button>
                         <Material.Button
                             color='inherit'
-                            onClick={() => setCurrentPage('Resume')}
+                            onClick={() => setCurrentPage('Portfolio')}
                         >
-                            Resume
+                            Portfolio
                         </Material.Button>
                         <Material.Button
                             color='inherit'
@@ -118,9 +118,9 @@ function Header({ setCurrentPage, currentPage }) {
                         </Material.Button>
                         <Material.Button
                             color='inherit'
-                            onClick={() => setCurrentPage('About')}
+                            onClick={() => setCurrentPage('Resume')}
                         >
-                            About
+                            Resume
                         </Material.Button>
                     </Material.Toolbar>
                 </Material.AppBar>

@@ -1,7 +1,8 @@
-// placeholder
-//import React from 'react';
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 function Footer() {
     return (
@@ -21,7 +22,18 @@ function Footer() {
                     position: 'absolute',
                 }}
             >
-                Footer
+                <GitHubIcon
+                    className='icon'
+                    href='https://github.com/averycaldwell'
+                />
+                <LinkedInIcon
+                    href='https://linkedin.com/averycaldwell'
+                    className='icon'
+                />
+                <TwitterIcon
+                    href='https://twitter.com/averycaldwell'
+                    className='icon'
+                />
             </Box>
         </footer>
     );
