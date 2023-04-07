@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+
 // MUI
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -12,6 +13,7 @@ import { ThemeProvider } from '@emotion/react';
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
+
 
 function App() {
     const [currentPage, setCurrentPage] = React.useState('Home');
