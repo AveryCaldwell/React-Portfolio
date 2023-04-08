@@ -1,9 +1,10 @@
 import * as React from 'react';
 import * as IconsMaterial from '@mui/icons-material';
 import * as Material from '@mui/material';
-function openLink(link) {
-    window.open(link, '_blank');
-}
+
+// function openLink(link) {
+//     window.open(link, '_blank');
+// }
 function Footer() {
     return (
         <footer className='footer'>
