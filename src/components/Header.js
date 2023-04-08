@@ -99,7 +99,7 @@ function Header({ setCurrentPage, currentPage }) {
                         </Material.Typography>
                         <Material.Button
                             color='inherit'
-                            onClick={() => setCurrentPage('Home')}
+                            onClick={() => setCurrentPage('About')}
                         >
                             Home
                         </Material.Button>

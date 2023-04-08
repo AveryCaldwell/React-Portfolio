@@ -11,12 +11,12 @@ import { ThemeProvider } from '@emotion/react';
 
 //Components
 import Header from './components/Header';
-import Home from './components/Home';
+import About from './components/About';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 
 function App() {
-    const [currentPage, setCurrentPage] = React.useState('Home');
+    const [currentPage, setCurrentPage] = React.useState('About');
     return (
         <ThemeProvider theme={theme}>
             <div className='App'>
@@ -34,7 +34,7 @@ function App() {
                             width: '100%',
                         }}
                     >
-                        <Home currentPage={currentPage} />
+                        <About currentPage={currentPage} />
                         <Portfolio currentPage={currentPage} />
                     </div>
                 </main>
