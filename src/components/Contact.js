@@ -16,7 +16,15 @@ function Contact({ currentPage }) {
 
                     {/* CONTACT FORM */}
                     <form inline={true} autoComplete='on'>
-                        <h2>Contact Form</h2>
+                        <h2
+                            style={{
+                                fontSize: '2rem',
+                                marginTop: 'auto',
+                                paddingTop: '25px',
+                            }}
+                        >
+                            Contact Form
+                        </h2>
                         <Material.Stack spacing={5} direction='column'>
                             {/* <Material.Box sx={{ '& > :not(style)': { m: 1 } }}>*/}
 
