@@ -1,8 +1,6 @@
 import * as React from 'react';
 import myGif from '../img/computer-bg.gif';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-
+import * as Material from '@mui/material';
 function Home({ currentPage }) {
     return (
         <React.Fragment>
@@ -14,11 +12,13 @@ function Home({ currentPage }) {
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center',
+                            backgroundImage: `url(${myGif})`,
+                            height: 'calc(100vh - 114px)',
                         }}
                     >
-                        <img src={myGif} alt='my-gif' />
+                        {/* <img src={myGif} alt='my-gif' /> */}
                         {/* FIX ME : correct the lin */}
-                        <Box
+                        <Material.Box
                             sx={{
                                 display: 'flex',
                                 justifyContent: 'flex-end',
@@ -28,10 +28,10 @@ function Home({ currentPage }) {
                                 },
                             }}
                         >
-                            <Button variant='contained' href='/About'>
+                            <Material.Button variant='contained'>
                                 Contained
-                            </Button>
-                        </Box>
+                            </Material.Button>
+                        </Material.Box>
                         {/* background div */}
                     </div>
                 </div>

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as Material from '@mui/material';
 // import * as IconsMaterial from '@mui/icons-material';
-
 //  for mobile
 // function HeaderMenu() {
 //     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -98,6 +97,12 @@ function Header({ setCurrentPage, currentPage }) {
                         >
                             Avery Caldwell, Full-Stack Developer
                         </Material.Typography>
+                        <Material.Button
+                            color='inherit'
+                            onClick={() => setCurrentPage('Home')}
+                        >
+                            Home
+                        </Material.Button>
                         <Material.Button
                             color='inherit'
                             onClick={() => setCurrentPage('About')}

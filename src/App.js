@@ -13,6 +13,7 @@ import { ThemeProvider } from '@emotion/react';
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import Portfolio from './components/Portfolio';
 
 function App() {
     const [currentPage, setCurrentPage] = React.useState('Home');
@@ -24,7 +25,18 @@ function App() {
                     currentPage={currentPage}
                 />
                 <main>
-                    <Home currentPage={currentPage} />
+                    <div
+                        style={{
+                            position: 'absolute',
+                            top: 64,
+                            left: 0,
+                            height: 'calc(100vh - 114px)',
+                            width: '100%',
+                        }}
+                    >
+                        <Home currentPage={currentPage} />
+                        <Portfolio currentPage={currentPage} />
+                    </div>
                 </main>
                 <Footer />
             </div>

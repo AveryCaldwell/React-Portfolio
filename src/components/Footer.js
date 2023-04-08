@@ -1,40 +1,43 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-
+import * as IconsMaterial from '@mui/icons-material';
+import * as Material from '@mui/material';
+function openLink(link) {
+    window.open(link, '_blank');
+}
 function Footer() {
     return (
         <footer className='footer'>
-            <Box
+            <Material.Box
                 className='footer-container'
                 sx={{
                     width: '100%',
                     height: 50,
                     backgroundColor: 'primary.dark',
-                    '&:hover': {
-                        backgroundColor: 'primary.main',
-                        opacity: [0.9, 0.8, 0.7],
-                    },
+
                     bottom: 0,
                     left: 0,
                     position: 'absolute',
                 }}
             >
-                <GitHubIcon
-                    className='icon'
+                <Material.Button
                     href='https://github.com/averycaldwell'
-                />
-                <LinkedInIcon
+                    target='_blank'
+                    rel='noreferrer'
+                    startIcon={<IconsMaterial.GitHub />}
+                ></Material.Button>
+                <Material.Button
                     href='https://linkedin.com/averycaldwell'
-                    className='icon'
-                />
-                <TwitterIcon
+                    target='_blank'
+                    rel='noreferrer'
+                    startIcon={<IconsMaterial.LinkedIn />}
+                ></Material.Button>
+                <Material.Button
                     href='https://twitter.com/averycaldwell'
-                    className='icon'
-                />
-            </Box>
+                    target='_blank'
+                    rel='noreferrer'
+                    startIcon={<IconsMaterial.Twitter />}
+                ></Material.Button>
+            </Material.Box>
         </footer>
     );
 }
