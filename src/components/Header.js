@@ -97,12 +97,12 @@ function Header({ setCurrentPage, currentPage }) {
                         >
                             Avery Caldwell, Full-Stack Developer
                         </Material.Typography>
-                        <Material.Button
+                        {/* <Material.Button
                             color='inherit'
                             onClick={() => setCurrentPage('About')}
                         >
                             Home
-                        </Material.Button>
+                        </Material.Button> */}
                         <Material.Button
                             color='inherit'
                             onClick={() => setCurrentPage('About')}

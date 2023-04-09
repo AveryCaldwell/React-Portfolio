@@ -16,9 +16,10 @@ function Resume({ currentPage }) {
                     <h1>Resume</h1>
                     {/* FIXME: link to pdf */}
                     <p>
-                        Download resume
+                        Download my
                         <a href='./components/resume.pdf' download>
-                            here
+                            {' '}
+                            resume
                         </a>
                     </p>
                 </div>
