@@ -15,6 +15,8 @@ import About from './components/About';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import Resume from './components/Resume';
+
 function App() {
     const [currentPage, setCurrentPage] = React.useState('About');
     return (
@@ -37,6 +39,7 @@ function App() {
                         <About currentPage={currentPage} />
                         <Portfolio currentPage={currentPage} />
                         <Contact currentPage={currentPage} />
+                        <Resume currentPage={currentPage} />
                     </div>
                 </main>
                 <Footer />

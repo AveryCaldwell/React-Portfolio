@@ -27,13 +27,13 @@ function Footer() {
                     startIcon={<IconsMaterial.GitHub />}
                 ></Material.Button>
                 <Material.Button
-                    href='https://linkedin.com/averycaldwell'
+                    href='https://www.linkedin.com/in/averycaldwell/'
                     target='_blank'
                     rel='noreferrer'
                     startIcon={<IconsMaterial.LinkedIn />}
                 ></Material.Button>
                 <Material.Button
-                    href='https://twitter.com/averycaldwell'
+                    href='https://twitter.com/adventureraves'
                     target='_blank'
                     rel='noreferrer'
                     startIcon={<IconsMaterial.Twitter />}

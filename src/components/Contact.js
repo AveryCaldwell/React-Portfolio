@@ -45,6 +45,7 @@ function Contact({ currentPage }) {
                                         Enter Name
                                     </Material.FormLabel>
                                     <Material.TextField
+                                        required
                                         type='text'
                                         placeholder='Name'
                                         id='name'
@@ -126,6 +127,7 @@ function Contact({ currentPage }) {
                                         id='message'
                                         variant='outlined'
                                         multiline
+                                        required
                                         rows={4}
                                         InputProps={{
                                             style: {
