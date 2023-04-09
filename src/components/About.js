@@ -13,21 +13,27 @@ function About({ currentPage }) {
                         backgroundColor: '#c9e4ca',
                         display: 'flex',
                         width: '100%',
+                        paddingLeft: '5%',
+                        paddingRight: '5%',
                     }}
                 >
-                    <div
-                        style={{
+                    <Material.Box
+                        sx={{
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: '35% 15%',
                             backgroundImage: `url(${aves2})`,
                             height: 'calc(100vh - 200px)',
-                            width: '25%',
+                            width: '35%',
                             backgroundColor: '#c9e4ca',
                             borderRadius: 300,
-                            border: '20px solid white',
+                            maxWidth: '300px',
+                            maxHeight: 300,
+                            margin: '2rem',
+                            border: '20px solid #e9f4e9',
+                            boxShadow: 2,
                         }}
-                    ></div>
+                    ></Material.Box>
 
                     <Material.Box
                         sx={{
@@ -45,7 +51,7 @@ function About({ currentPage }) {
                         }}
                     >
                         <p style={{ overflow: 'auto', height: '100%' }}>
-                            Hey there! I'm Avery, a full stack developer with a
+                            "Hey there! I'm Avery, a full stack developer with a
                             year of experience in developing web applications.
                             I'm passionate about building scalable, responsive,
                             and user-friendly web apps using a variety of
@@ -74,7 +80,11 @@ function About({ currentPage }) {
                             them to create something innovative and exciting.
                             And if you're searching for a developer who can
                             bring a dash of creativity and humor to your team,
-                            look no further - I'm your girl!
+                            look no further - I'm your girl!"
+                            <br />
+                            - Avery Caldwell
+                            <br />
+                            Full-Stack Developer
                         </p>
                     </Material.Box>
                 </div>

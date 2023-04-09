@@ -8,8 +8,13 @@ function Contact({ currentPage }) {
             {currentPage === 'Contact' && (
                 <div
                     style={{
+                        height: '100%',
                         backgroundColor: '#c9e4ca',
-                        height: 'calc(100vh - 114px)',
+                        display: 'flex',
+                        width: '100%',
+                        paddingLeft: '5%',
+                        paddingRight: '5%',
+                        overflow: 'auto',
                     }}
                 >
                     {/* everything goes inside this div */}

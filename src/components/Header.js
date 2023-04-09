@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as Material from '@mui/material';
+import avesLogo from '../img/aves_hi.png';
 // import * as IconsMaterial from '@mui/icons-material';
 //  for mobile
 // function HeaderMenu() {
@@ -84,12 +85,52 @@ import * as Material from '@mui/material';
 // }
 
 function Header({ setCurrentPage, currentPage }) {
+    const buttonSX = {
+        color: 'white',
+        position: 'relative',
+
+        '&:before': {
+            content: "''",
+            position: 'absolute',
+            width: '0',
+            height: '2px',
+            bottom: '-3px',
+            left: '50%',
+            transform: 'translate(-50%,0%)',
+            backgroundColor: 'white',
+            visibility: 'hidden',
+            transition: 'all 0.3s ease-in-out',
+        },
+        '&:hover:before': {
+            visibility: 'visible',
+            width: '100%',
+        },
+    };
+    const buttonSXSelected = {
+        color: 'white',
+        position: 'relative',
+        borderBottom: '2px solid white',
+        borderRadius: 0,
+        bottom: -2,
+    };
     return (
         <header className='header'>
             <Material.Box sx={{ flexGrow: 1 }}>
                 <Material.AppBar position='fixed'>
                     <Material.Toolbar>
-                        {/* <HeaderMenu /> */}
+                        <img
+                            src={avesLogo}
+                            style={{
+                                height: '50px',
+                                width: '50px',
+                                backgroundColor: '#c9e4ca',
+                                borderRadius: 300,
+                                border: '2px solid #e9f4e9',
+                                boxShadow: 2,
+                                marginRight: 10,
+                            }}
+                            alt='Aves Logo'
+                        />
                         <Material.Typography
                             variant='h6'
                             component='div'
@@ -97,33 +138,48 @@ function Header({ setCurrentPage, currentPage }) {
                         >
                             Avery Caldwell, Full-Stack Developer
                         </Material.Typography>
-                        {/* <Material.Button
-                            color='inherit'
-                            onClick={() => setCurrentPage('About')}
-                        >
-                            Home
-                        </Material.Button> */}
+
                         <Material.Button
                             color='inherit'
                             onClick={() => setCurrentPage('About')}
+                            sx={
+                                currentPage === 'About'
+                                    ? buttonSXSelected
+                                    : buttonSX
+                            }
                         >
                             About Me
                         </Material.Button>
                         <Material.Button
                             color='inherit'
                             onClick={() => setCurrentPage('Portfolio')}
+                            sx={
+                                currentPage === 'Portfolio'
+                                    ? buttonSXSelected
+                                    : buttonSX
+                            }
                         >
                             Portfolio
                         </Material.Button>
                         <Material.Button
                             color='inherit'
                             onClick={() => setCurrentPage('Contact')}
+                            sx={
+                                currentPage === 'Contact'
+                                    ? buttonSXSelected
+                                    : buttonSX
+                            }
                         >
                             Contact
                         </Material.Button>
                         <Material.Button
                             color='inherit'
                             onClick={() => setCurrentPage('Resume')}
+                            sx={
+                                currentPage === 'Resume'
+                                    ? buttonSXSelected
+                                    : buttonSX
+                            }
                         >
                             Resume
                         </Material.Button>

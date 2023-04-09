@@ -26,14 +26,22 @@ function App() {
                     setCurrentPage={setCurrentPage}
                     currentPage={currentPage}
                 />
-                <main>
+                <main
+                    style={{
+                        position: 'absolute',
+                        top: 64,
+                        left: 0,
+                        width: '100%',
+                        height: 'calc(100vh - 114px)',
+                        backgroundColor: '#9F9F9F',
+                    }}
+                >
                     <div
                         style={{
-                            position: 'absolute',
-                            top: 64,
-                            left: 0,
                             height: 'calc(100vh - 114px)',
                             width: '100%',
+                            maxWidth: 1000,
+                            margin: '0 auto',
                         }}
                     >
                         <About currentPage={currentPage} />
