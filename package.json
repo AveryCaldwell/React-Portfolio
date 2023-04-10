@@ -2,7 +2,7 @@
     "name": "react-portfolio",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://averycaldwell.github.io/React-Portfolio/",
+    "homepage": "https://averycaldwell.github.io/",
     "dependencies": {
         "@emotion/react": "^11.10.6",
         "@emotion/styled": "^11.10.6",
