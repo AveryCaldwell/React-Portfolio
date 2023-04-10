@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-// import * as Material from '@mui/material';
 
 // MUI
 import '@fontsource/roboto/300.css';
@@ -17,11 +16,13 @@ import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
-// import { Container } from '@mui/material';
 
+// This function renders main content of web app
 function App() {
+    // The "useState" hook is used to declare a state variable called "currentPage" which is initially set to "About".
     const [currentPage, setCurrentPage] = React.useState('About');
     return (
+        // using a theme library to manage the styling of components.
         <ThemeProvider theme={theme}>
             <div className='App'>
                 <Header

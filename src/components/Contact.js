@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as IconsMaterial from '@mui/icons-material';
 import * as Material from '@mui/material';
 
+// Function to render Contact component
 function Contact({ currentPage }) {
     const mediaSize = Material.useMediaQuery('(min-width:600px)');
     return (
@@ -18,7 +19,7 @@ function Contact({ currentPage }) {
                         overflow: 'auto',
                     }}
                 >
-                    {/* everything goes inside this div */}
+                    {/* center contents */}
                     <div
                         style={{
                             marginLeft: 'auto',
@@ -149,6 +150,7 @@ function Contact({ currentPage }) {
                                                 },
                                             }}
                                         />
+                                        {/* SUBMIT BUTTON */}
                                         <Material.Button
                                             sx={{
                                                 margin: '15px',

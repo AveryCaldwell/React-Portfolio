@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as Material from '@mui/material';
 import * as IconsMaterial from '@mui/icons-material';
+// project images
 import imageWYW from '../img/WYW.png';
 import imageCC from '../img/CC.png';
 import imageWork from '../img/work.png';
@@ -8,7 +9,7 @@ import imageEmployee from '../img/employee.png';
 import imageTeam from '../img/team.png';
 import imageWeather from '../img/weather.png';
 
-// portfolio images
+// project images
 const itemData = [
     {
         img: imageWYW,
@@ -55,6 +56,7 @@ const itemData = [
         cols: 2,
     },
 ];
+// Function to render Portfolio component
 function Portfolio({ currentPage }) {
     const mediaSize = Material.useMediaQuery('(min-width:900px)');
     return (
@@ -70,8 +72,7 @@ function Portfolio({ currentPage }) {
                         paddingRight: '5%',
                     }}
                 >
-                    {/* everything goes inside this div */}
-
+                    {/* Project Image List */}
                     <Material.ImageList
                         cols={3}
                         sx={{

@@ -2,18 +2,22 @@ import * as React from 'react';
 import * as Material from '@mui/material';
 import * as IconsMaterial from '@mui/icons-material';
 import avesLogo from '../img/averypizza.png';
-// import theme from '../theme.js';
 
 function HeaderMenu({ setCurrentPage }) {
+    //  The menu when it is clicked
     const [anchorEl, setAnchorEl] = React.useState(null);
+    //  Tracks whether the menu is open or not,
     const open = Boolean(anchorEl);
+    // Updates the current page when a menu item is clicked
     const handleClick = (event) => setAnchorEl(event.currentTarget);
+    //  called when the menu is closed
     const handleClose = () => {
         setAnchorEl(null);
     };
     return (
         <React.Fragment>
             <Material.Tooltip title='Menu'>
+                {/* Menu Icon that appears at certain media size */}
                 <Material.IconButton
                     size='large'
                     edge='start'
@@ -87,7 +91,7 @@ function HeaderMenu({ setCurrentPage }) {
         </React.Fragment>
     );
 }
-
+// Function to render Header component
 function Header({ setCurrentPage, currentPage }) {
     const buttonSX = {
         color: 'white',
@@ -117,12 +121,14 @@ function Header({ setCurrentPage, currentPage }) {
         borderRadius: 0,
         bottom: -2,
     };
+    //  Media queries
     const mediaSize = Material.useMediaQuery('(min-width:900px)');
     const mediaSmall = Material.useMediaQuery('(min-width:400px)');
     return (
         <header className='header'>
             <Material.Box sx={{ flexGrow: 1, minHeight: 600 }}>
                 <Material.AppBar position='fixed' sx={{ height: '64px' }}>
+                    {/* Logo image */}
                     <Material.Toolbar>
                         <img
                             src={avesLogo}
@@ -137,6 +143,7 @@ function Header({ setCurrentPage, currentPage }) {
                             }}
                             alt='Aves Logo'
                         />
+                        {/* Logo text */}
                         <Material.Typography
                             variant='h6'
                             component='div'
@@ -155,6 +162,7 @@ function Header({ setCurrentPage, currentPage }) {
                                 <strong>Avery Caldwell</strong>, Full-Stack
                                 Developer
                             </div>
+                            {/* Navigation */}
                         </Material.Typography>
                         {mediaSize === true && (
                             <div>

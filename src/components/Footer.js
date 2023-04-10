@@ -2,9 +2,7 @@ import * as React from 'react';
 import * as IconsMaterial from '@mui/icons-material';
 import * as Material from '@mui/material';
 
-// function openLink(link) {
-//     window.open(link, '_blank');
-// }
+// Function to render Footer component
 function Footer() {
     const mediaSize = Material.useMediaQuery('(min-width:500px)');
     return (
@@ -26,6 +24,7 @@ function Footer() {
                         display: mediaSize ? 'block' : 'none',
                     }}
                 >
+                    {/* Link requirement icons */}
                     <Material.Button
                         href='https://github.com/averycaldwell'
                         target='_blank'

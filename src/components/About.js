@@ -1,9 +1,10 @@
 import * as React from 'react';
-// import myGif from '../img/computer-bg.gif';
 import * as Material from '@mui/material';
 import aves2 from '../img/aves2.png';
 
+//  Function to render About component
 function About({ currentPage }) {
+    // Media query for sizing
     const mediaSize = Material.useMediaQuery('(min-width:900px)');
     return (
         <React.Fragment>
@@ -19,6 +20,7 @@ function About({ currentPage }) {
                         overflow: 'auto',
                     }}
                 >
+                    {/*  Image requirement */}
                     <Material.Box
                         sx={{
                             backgroundSize: 'cover',
@@ -35,7 +37,7 @@ function About({ currentPage }) {
                             display: 'inline-block',
                         }}
                     ></Material.Box>
-
+                    {/*  About content section */}
                     <Material.Box
                         sx={{
                             margin: mediaSize ? '2rem' : '0 0 1rem 0',
@@ -94,7 +96,5 @@ function About({ currentPage }) {
         </React.Fragment>
     );
 }
-
-// <Box sx={{ maxWidth: 'md' }}>…
 
 export default About;

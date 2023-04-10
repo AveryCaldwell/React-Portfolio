@@ -1,7 +1,7 @@
 import * as React from 'react';
-// import * as IconsMaterial from '@mui/icons-material';
 import * as Material from '@mui/material';
 
+// Function to render Resume component
 function Resume({ currentPage }) {
     return (
         <React.Fragment>
@@ -15,6 +15,7 @@ function Resume({ currentPage }) {
                         paddingTop: '10%',
                     }}
                 >
+                    {/* Resume section */}
                     <Material.Box
                         sx={{
                             marginLeft: 'auto',
@@ -27,7 +28,6 @@ function Resume({ currentPage }) {
                             width: '75%',
                             boxShadow: 2,
                             backgroundColor: '#e9f4e9',
-                            // height: 'calc(100vh - 200px)',
                             height: 'fit-content',
                             overflow: 'scroll-y',
                         }}
