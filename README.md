@@ -1,4 +1,4 @@
-# __React Portfolio__
+# __React Portfolio 💼__
 
 
 ## __Table of contents__
@@ -20,7 +20,7 @@
 
 ## __Description 📝__
 
-- A single-page React portfolio of work samples for a potential employer.
+- A single-page React portfolio of work samples for a potential employer using Material UI.
 
 <br>
 <hr>
@@ -74,7 +74,20 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 
 <br>
 
-TODO: UPDATE 
+* The following dependencies are needed: 
+  - `npm install @mui/material @emotion/react @emotion/styled`
+  - `npm install @fontsource/roboto`
+  - `npm install @mui/icons-material` 
+  - `npm install --save react-router-dom`
+* Versions:
+  - react: ^17.0.2
+  - react-dom: ^17.0.2
+  - react-scripts: 4.0.3
+
+1. Clone repo
+2. run `npm start`
+
+
 
 <br>
 
@@ -82,15 +95,14 @@ TODO: UPDATE
 
 ​<br>
 
-TODO: UPDATE LINKS
-![](./public/images/Screenshot.png)
+![](/src/img/screenshot.png)
 ​
 ​<br>
 
 ### __Links 🔗__
-TODO: UPDATE LINKS
-Live URL: [https://averycaldwell.github.io/React-Portfolio/](https://averycaldwell.github.io/React-Portfolio/)
-Github Repository: [https://github.com/AveryCaldwell/React-Portfolio](https://github.com/AveryCaldwell/React-Portfolio)
+
+- Live URL: [https://averycaldwell.github.io/React-Portfolio/](https://averycaldwell.github.io/React-Portfolio/)
+- Github Repository: [https://github.com/AveryCaldwell/React-Portfolio](https://github.com/AveryCaldwell/React-Portfolio)
 
 <br>
 <hr>
@@ -98,7 +110,6 @@ Github Repository: [https://github.com/AveryCaldwell/React-Portfolio](https://gi
 
 ##  __My process 💡__
 
-TODO: UPDATE 
 
 ###  Built with 🔨
 - JavaScript
@@ -129,5 +140,3 @@ TODO: UPDATE
 ### __Grade🗄️__ 
 
 - TBD
-
-https://averycaldwell.github.io/React-Portfolio/
