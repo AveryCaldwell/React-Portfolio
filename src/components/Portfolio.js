@@ -3,7 +3,7 @@ import * as Material from '@mui/material';
 import * as IconsMaterial from '@mui/icons-material';
 import imageWYW from '../img/WYW.png';
 import imageCC from '../img/CC.png';
-import imageTechBlog from '../img/techblog.png';
+import imageWork from '../img/work.png';
 import imageEmployee from '../img/employee.png';
 import imageTeam from '../img/team.png';
 import imageWeather from '../img/weather.png';
@@ -22,15 +22,15 @@ const itemData = [
     {
         img: imageCC,
         title: 'Cheers Check',
-        link: 'https://dry-gorge-23555.herokuapp.com/',
+        link: 'https://averycaldwell.github.io/CheersCheck/',
         repo: 'https://github.com/AveryCaldwell/CheersCheck',
         featured: true,
     },
     {
-        img: imageTechBlog,
-        link: ' https://averycaldwell-tech-blog.herokuapp.com/',
-        repo: 'https://github.com/AveryCaldwell/Tech-Blog-MVC',
-        title: 'Tech Blog MVC',
+        img: imageWork,
+        link: 'https://averycaldwell.github.io/work-Day-Scheduler//',
+        repo: 'https://github.com/AveryCaldwell/work-Day-Scheduler',
+        title: 'Work Day Scheduler',
     },
     {
         img: imageEmployee,
@@ -86,7 +86,22 @@ function Portfolio({ currentPage }) {
                     </Material.Box> */}
                     <Material.ImageList cols={3} sx={{ width: '100%' }}>
                         <Material.ImageListItem key='Subheader' cols={3}>
-                            <Material.ListSubheader component='div'>
+                            <Material.ListSubheader
+                                component='div'
+                                sx={{
+                                    borderRadius: 16,
+                                    backgroundColor: '#e9f4e9',
+                                    width: '25%',
+                                    marginLeft: 'auto',
+                                    marginRight: 'auto',
+                                    marginTop: '5%',
+                                    fontSize: '2rem',
+                                    border: '10px solid #e9f4e9',
+                                    boxShadow: 2,
+                                    color: '#364958',
+                                    minWidth: 550,
+                                }}
+                            >
                                 Projects
                             </Material.ListSubheader>
                         </Material.ImageListItem>

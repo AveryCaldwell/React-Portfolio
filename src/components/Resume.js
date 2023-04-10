@@ -11,38 +11,45 @@ function Resume({ currentPage }) {
                         height: '100%',
                         backgroundColor: '#c9e4ca',
                         display: 'flex',
-                        width: '100%',
-                        paddingLeft: '5%',
-                        paddingRight: '5%',
                         overflow: 'auto',
+                        paddingTop: '10%',
                     }}
                 >
                     <Material.Box
                         sx={{
-                            margin: '2rem',
-                            padding: '2rem',
+                            marginLeft: 'auto',
+                            marginRight: 'auto',
+                            padding: '1.5rem',
                             borderRadius: 16,
-                            textAlign: 'center',
-                            fontSize: '1.3rem',
+                            textAlign: 'left',
+                            fontSize: '1rem',
                             fontWeight: 'lighter',
                             width: '75%',
                             boxShadow: 2,
                             backgroundColor: '#e9f4e9',
-                            height: 'calc(100vh - 200px)',
+                            // height: 'calc(100vh - 200px)',
+                            height: 'fit-content',
                             overflow: 'scroll-y',
                         }}
                     >
-                        <h1>Resume</h1>
-                        {/* FIXME: link to pdf */}
-                        <h3>
-                            Download my&nbsp;
-                            <a
-                                href='./pdf/resume.pdf'
-                                download='AveryCaldwellResume.pdf'
-                            >
-                                resume
-                            </a>
-                        </h3>
+                        <div
+                            style={{
+                                textAlign: 'center',
+                                padding: 5,
+                                color: '#13292a',
+                            }}
+                        >
+                            <h1>Resume</h1>
+                            <p>
+                                Download my&nbsp;
+                                <a
+                                    href='./pdf/resume.pdf'
+                                    download='AveryCaldwellResume.pdf'
+                                >
+                                    resume
+                                </a>
+                            </p>
+                        </div>
                         <h2>Front-end Proficiencies</h2>
                         <ul>
                             <li>HTML</li>

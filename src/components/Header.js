@@ -1,88 +1,89 @@
 import * as React from 'react';
 import * as Material from '@mui/material';
+import theme from '../theme.js';
 import avesLogo from '../img/aves_hi.png';
-// import * as IconsMaterial from '@mui/icons-material';
-//  for mobile
-// function HeaderMenu() {
-//     const [anchorEl, setAnchorEl] = React.useState(null);
-//     const open = Boolean(anchorEl);
-//     const handleClick = (event) => setAnchorEl(event.currentTarget);
-//     const handleClose = () => {
-//         setAnchorEl(null);
-//     };
-//     return (
-//         <React.Fragment>
-//             <Material.Tooltip title='Menu'>
-//                 <Material.IconButton
-//                     size='large'
-//                     edge='start'
-//                     color='inherit'
-//                     aria-label='menu'
-//                     sx={{ mr: 2 }}
-//                     onClick={handleClick}
-//                 >
-//                     <IconsMaterial.MenuIcon />
-//                 </Material.IconButton>
-//             </Material.Tooltip>
 
-//             <Material.Menu
-//                 anchorEl={anchorEl}
-//                 id='account-menu'
-//                 open={open}
-//                 onClose={handleClose}
-//                 onClick={handleClose}
-//                 PaperProps={{
-//                     elevation: 0,
-//                     sx: {
-//                         overflow: 'visible',
-//                         filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-//                         mt: 1.5,
-//                         '&:before': {
-//                             content: '""',
-//                             display: 'block',
-//                             position: 'absolute',
-//                             top: 0,
-//                             left: 14,
-//                             width: 10,
-//                             height: 10,
-//                             bgcolor: 'background.paper',
-//                             transform: 'translateY(-50%) rotate(45deg)',
-//                             zIndex: 0,
-//                         },
-//                     },
-//                 }}
-//                 transformOrigin={{ horizontal: 'left', vertical: 'top' }}
-//                 anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-//             >
-//                 {/* <Material.MenuItem onClick={handleClose}>
-//                     <Avatar /> Profile
-//                 </Material.MenuItem>
-//                 <Material.MenuItem onClick={handleClose}>
-//                     <Avatar /> My account
-//                 </Material.MenuItem>
-//                 <Divider /> */}
-//                 <Material.MenuItem onClick={handleClose}>
-//                     <Material.ListItemIcon>
-//                         <IconsMaterial.PersonAdd fontSize='small' />
-//                     </Material.ListItemIcon>
-//                     Bitches
-//                 </Material.MenuItem>
-//                 <Material.MenuItem onClick={handleClose}>
-//                     <Material.ListItemIcon>
-//                         <IconsMaterial.Settings fontSize='small' />
-//                     </Material.ListItemIcon>
-//                     IconsMaterial.Settings
-//                 </Material.MenuItem>
-//                 <Material.MenuItem onClick={handleClose}>
-//                     <Material.ListItemIcon>
-//                         <IconsMaterial.Logout fontSize='small' />
-//                     </Material.ListItemIcon>
-//                     IconsMaterial.Logout
-//                 </Material.MenuItem>
-//             </Material.Menu>
-//         </React.Fragment>
-//     );
-// }
+import * as IconsMaterial from '@mui/icons-material';
+
+function HeaderMenu({ setCurrentPage }) {
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => setAnchorEl(event.currentTarget);
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+    return (
+        <React.Fragment>
+            <Material.Tooltip title='Menu'>
+                <Material.IconButton
+                    size='large'
+                    edge='start'
+                    color='inherit'
+                    aria-label='menu'
+                    sx={{ mr: 2 }}
+                    onClick={handleClick}
+                >
+                    <IconsMaterial.Menu />
+                </Material.IconButton>
+            </Material.Tooltip>
+
+            <Material.Menu
+                anchorEl={anchorEl}
+                id='account-menu'
+                open={open}
+                onClose={handleClose}
+                onClick={handleClose}
+                PaperProps={{
+                    elevation: 0,
+                    sx: {
+                        overflow: 'visible',
+                        filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                        mt: 1.5,
+                        '&:before': {
+                            content: '""',
+                            display: 'block',
+                            position: 'absolute',
+                            top: 0,
+                            right: 14,
+                            width: 10,
+                            height: 10,
+                            bgcolor: 'background.paper',
+                            transform: 'translateY(-50%) rotate(45deg)',
+                            zIndex: 0,
+                        },
+                    },
+                }}
+                transformOrigin={{ horizontal: 'left', vertical: 'top' }}
+                anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
+            >
+                <Material.MenuItem onClick={() => setCurrentPage('About')}>
+                    <Material.ListItemIcon>
+                        <IconsMaterial.Person fontSize='small' />
+                    </Material.ListItemIcon>
+                    About Me
+                </Material.MenuItem>
+                <Material.MenuItem onClick={() => setCurrentPage('Portfolio')}>
+                    <Material.ListItemIcon>
+                        <IconsMaterial.CollectionsBookmark fontSize='small' />
+                    </Material.ListItemIcon>
+                    Portfolio
+                </Material.MenuItem>
+                <Material.MenuItem onClick={() => setCurrentPage('Contact')}>
+                    <Material.ListItemIcon>
+                        <IconsMaterial.ContactPage fontSize='small' />
+                    </Material.ListItemIcon>
+                    Contact
+                </Material.MenuItem>
+                <Material.MenuItem onClick={() => setCurrentPage('Resume')}>
+                    <Material.ListItemIcon>
+                        <IconsMaterial.DocumentScanner fontSize='small' />
+                    </Material.ListItemIcon>
+                    Resume
+                </Material.MenuItem>
+            </Material.Menu>
+        </React.Fragment>
+    );
+}
 
 function Header({ setCurrentPage, currentPage }) {
     const buttonSX = {
@@ -113,10 +114,11 @@ function Header({ setCurrentPage, currentPage }) {
         borderRadius: 0,
         bottom: -2,
     };
+    const mediaSize = Material.useMediaQuery('(min-width:900px)');
     return (
         <header className='header'>
-            <Material.Box sx={{ flexGrow: 1 }}>
-                <Material.AppBar position='fixed'>
+            <Material.Box sx={{ flexGrow: 1, minHeight: 600 }}>
+                <Material.AppBar position='fixed' sx={{ height: '64px' }}>
                     <Material.Toolbar>
                         <img
                             src={avesLogo}
@@ -138,51 +140,57 @@ function Header({ setCurrentPage, currentPage }) {
                         >
                             Avery Caldwell, Full-Stack Developer
                         </Material.Typography>
-
-                        <Material.Button
-                            color='inherit'
-                            onClick={() => setCurrentPage('About')}
-                            sx={
-                                currentPage === 'About'
-                                    ? buttonSXSelected
-                                    : buttonSX
-                            }
-                        >
-                            About Me
-                        </Material.Button>
-                        <Material.Button
-                            color='inherit'
-                            onClick={() => setCurrentPage('Portfolio')}
-                            sx={
-                                currentPage === 'Portfolio'
-                                    ? buttonSXSelected
-                                    : buttonSX
-                            }
-                        >
-                            Portfolio
-                        </Material.Button>
-                        <Material.Button
-                            color='inherit'
-                            onClick={() => setCurrentPage('Contact')}
-                            sx={
-                                currentPage === 'Contact'
-                                    ? buttonSXSelected
-                                    : buttonSX
-                            }
-                        >
-                            Contact
-                        </Material.Button>
-                        <Material.Button
-                            color='inherit'
-                            onClick={() => setCurrentPage('Resume')}
-                            sx={
-                                currentPage === 'Resume'
-                                    ? buttonSXSelected
-                                    : buttonSX
-                            }
-                        >
-                            Resume
-                        </Material.Button>
+                        {mediaSize === true && (
+                            <div>
+                                <Material.Button
+                                    color='inherit'
+                                    onClick={() => setCurrentPage('About')}
+                                    sx={
+                                        currentPage === 'About'
+                                            ? buttonSXSelected
+                                            : buttonSX
+                                    }
+                                >
+                                    About Me
+                                </Material.Button>
+                                <Material.Button
+                                    color='inherit'
+                                    onClick={() => setCurrentPage('Portfolio')}
+                                    sx={
+                                        currentPage === 'Portfolio'
+                                            ? buttonSXSelected
+                                            : buttonSX
+                                    }
+                                >
+                                    Portfolio
+                                </Material.Button>
+                                <Material.Button
+                                    color='inherit'
+                                    onClick={() => setCurrentPage('Contact')}
+                                    sx={
+                                        currentPage === 'Contact'
+                                            ? buttonSXSelected
+                                            : buttonSX
+                                    }
+                                >
+                                    Contact
+                                </Material.Button>
+                                <Material.Button
+                                    color='inherit'
+                                    onClick={() => setCurrentPage('Resume')}
+                                    sx={
+                                        currentPage === 'Resume'
+                                            ? buttonSXSelected
+                                            : buttonSX
+                                    }
+                                >
+                                    Resume
+                                </Material.Button>
+                            </div>
+                        )}
+                        {mediaSize !== true && (
+                            <HeaderMenu setCurrentPage={setCurrentPage} />
+                        )}
                     </Material.Toolbar>
                 </Material.AppBar>
             </Material.Box>

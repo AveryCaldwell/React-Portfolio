@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import * as Material from '@mui/material';
 
 // MUI
 import '@fontsource/roboto/300.css';
@@ -16,6 +17,7 @@ import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
+import { Container } from '@mui/material';
 
 function App() {
     const [currentPage, setCurrentPage] = React.useState('About');
@@ -29,16 +31,19 @@ function App() {
                 <main
                     style={{
                         position: 'absolute',
+
                         top: 64,
                         left: 0,
                         width: '100%',
                         height: 'calc(100vh - 114px)',
-                        backgroundColor: '#9F9F9F',
+                        background:
+                            'radial-gradient(circle, rgba(201,228,202,1) 0%, rgba(59,96,100,1) 100%)',
                     }}
                 >
                     <div
                         style={{
                             height: 'calc(100vh - 114px)',
+                            height: '100%',
                             width: '100%',
                             maxWidth: 1000,
                             margin: '0 auto',

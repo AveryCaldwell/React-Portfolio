@@ -5,12 +5,20 @@ const theme = createTheme({
     palette: {
         mode: 'light',
         primary: {
-            main: '#55828b',
+            main: '#87bba2',
             light: '#c9e4ca',
-            dark: '#3b6064',
+            dark: '#364958',
         },
         secondary: {
             main: '#f50057',
+        },
+    },
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 600,
+            md: 900,
+            lg: 1200,
         },
     },
 });
