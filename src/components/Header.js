@@ -1,9 +1,8 @@
 import * as React from 'react';
 import * as Material from '@mui/material';
-import theme from '../theme.js';
-import avesLogo from '../img/aves_hi.png';
-
 import * as IconsMaterial from '@mui/icons-material';
+import avesLogo from '../img/averypizza.png';
+// import theme from '../theme.js';
 
 function HeaderMenu({ setCurrentPage }) {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -23,7 +22,11 @@ function HeaderMenu({ setCurrentPage }) {
                     sx={{ mr: 2 }}
                     onClick={handleClick}
                 >
-                    <IconsMaterial.Menu />
+                    <IconsMaterial.Menu
+                        sx={{
+                            color: 'white',
+                        }}
+                    />
                 </Material.IconButton>
             </Material.Tooltip>
 
@@ -115,6 +118,7 @@ function Header({ setCurrentPage, currentPage }) {
         bottom: -2,
     };
     const mediaSize = Material.useMediaQuery('(min-width:900px)');
+    const mediaSmall = Material.useMediaQuery('(min-width:400px)');
     return (
         <header className='header'>
             <Material.Box sx={{ flexGrow: 1, minHeight: 600 }}>
@@ -136,9 +140,21 @@ function Header({ setCurrentPage, currentPage }) {
                         <Material.Typography
                             variant='h6'
                             component='div'
-                            sx={{ marginRight: 'auto', left: 0 }}
+                            sx={{
+                                marginRight: 'auto',
+                                left: 0,
+                                color: 'white',
+                                fontWeight: 'light',
+                            }}
                         >
-                            Avery Caldwell, Full-Stack Developer
+                            <div
+                                style={{
+                                    display: mediaSmall ? 'block' : 'none',
+                                }}
+                            >
+                                <strong>Avery Caldwell</strong>, Full-Stack
+                                Developer
+                            </div>
                         </Material.Typography>
                         {mediaSize === true && (
                             <div>

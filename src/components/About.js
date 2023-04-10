@@ -23,7 +23,7 @@ function About({ currentPage }) {
                         sx={{
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
-                            backgroundPosition: '35% 15%',
+                            backgroundPosition: 'top -20px left 29px',
                             backgroundImage: `url(${aves2})`,
                             height: mediaSize ? 300 : 200,
                             width: mediaSize ? 300 : 200,

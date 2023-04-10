@@ -3,7 +3,7 @@ import * as IconsMaterial from '@mui/icons-material';
 import * as Material from '@mui/material';
 
 function Contact({ currentPage }) {
-    const mediaSize = Material.useMediaQuery('(min-width:900px)');
+    const mediaSize = Material.useMediaQuery('(min-width:600px)');
     return (
         <React.Fragment>
             {currentPage === 'Contact' && (
@@ -11,10 +11,10 @@ function Contact({ currentPage }) {
                     style={{
                         height: '100%',
                         backgroundColor: '#c9e4ca',
-                        display: 'flex',
+                        // display: 'flex',
                         width: '100%',
-                        paddingLeft: '5%',
-                        paddingRight: '5%',
+                        paddingLeft: mediaSize ? '5%' : '0',
+                        paddingRight: mediaSize ? '5%' : '0',
                         overflow: 'auto',
                     }}
                 >
@@ -23,8 +23,6 @@ function Contact({ currentPage }) {
                         style={{
                             marginLeft: 'auto',
                             marginRight: 'auto',
-                            height: mediaSize ? 300 : 200,
-                            width: mediaSize ? 300 : 200,
                         }}
                     >
                         {/* CONTACT FORM */}
@@ -142,7 +140,9 @@ function Contact({ currentPage }) {
                                             rows={4}
                                             InputProps={{
                                                 style: {
-                                                    width: '500px',
+                                                    width: mediaSize
+                                                        ? 500
+                                                        : 250,
                                                     margin: '15px',
                                                     fontSize: '1rem',
                                                     borderRadius: '8px',

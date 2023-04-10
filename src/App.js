@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import * as Material from '@mui/material';
+// import * as Material from '@mui/material';
 
 // MUI
 import '@fontsource/roboto/300.css';
@@ -17,7 +17,7 @@ import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
-import { Container } from '@mui/material';
+// import { Container } from '@mui/material';
 
 function App() {
     const [currentPage, setCurrentPage] = React.useState('About');
@@ -43,7 +43,6 @@ function App() {
                     <div
                         style={{
                             height: 'calc(100vh - 114px)',
-                            height: '100%',
                             width: '100%',
                             maxWidth: 1000,
                             margin: '0 auto',
