@@ -3,6 +3,7 @@ import * as IconsMaterial from '@mui/icons-material';
 import * as Material from '@mui/material';
 
 function Contact({ currentPage }) {
+    const mediaSize = Material.useMediaQuery('(min-width:900px)');
     return (
         <React.Fragment>
             {currentPage === 'Contact' && (
@@ -22,7 +23,8 @@ function Contact({ currentPage }) {
                         style={{
                             marginLeft: 'auto',
                             marginRight: 'auto',
-                            marginRight: 'auto',
+                            height: mediaSize ? 300 : 200,
+                            width: mediaSize ? 300 : 200,
                         }}
                     >
                         {/* CONTACT FORM */}

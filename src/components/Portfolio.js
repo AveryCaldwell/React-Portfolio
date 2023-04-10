@@ -56,6 +56,7 @@ const itemData = [
     },
 ];
 function Portfolio({ currentPage }) {
+    const mediaSize = Material.useMediaQuery('(min-width:900px)');
     return (
         <React.Fragment>
             {currentPage === 'Portfolio' && (
@@ -70,40 +71,30 @@ function Portfolio({ currentPage }) {
                     }}
                 >
                     {/* everything goes inside this div */}
-                    {/* <Material.Box
+
+                    <Material.ImageList
+                        cols={3}
                         sx={{
-                            color: '#364958',
-                            fontSize: '3rem',
-                            display: 'flex',
-                            justifyContent: 'space-evenly',
-                            alignItems: 'center',
-                            mx: 'auto',
-                            p: 5,
-                            overflowY: 'none',
+                            width: '100%',
+                            display: mediaSize ? 'grid' : 'block',
                         }}
                     >
-                        My Portfolio
-                    </Material.Box> */}
-                    <Material.ImageList cols={3} sx={{ width: '100%' }}>
                         <Material.ImageListItem key='Subheader' cols={3}>
-                            <Material.ListSubheader
-                                component='div'
-                                sx={{
-                                    borderRadius: 16,
-                                    backgroundColor: '#e9f4e9',
+                            <div
+                                style={{
                                     width: '25%',
                                     marginLeft: 'auto',
                                     marginRight: 'auto',
-                                    marginTop: '5%',
-                                    fontSize: '2rem',
-                                    border: '10px solid #e9f4e9',
+                                    marginTop: mediaSize ? '5%' : '7%',
+                                    fontSize: mediaSize ? '2.2rem' : '1.25rem',
+                                    fontWeight: 'bold',
                                     boxShadow: 2,
                                     color: '#364958',
-                                    minWidth: 550,
+                                    paddingBottom: 5,
                                 }}
                             >
                                 Projects
-                            </Material.ListSubheader>
+                            </div>
                         </Material.ImageListItem>
                         {itemData.map((item) => (
                             <Material.ImageListItem key={item.img}>
