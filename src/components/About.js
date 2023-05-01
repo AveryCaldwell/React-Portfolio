@@ -86,6 +86,26 @@ function About({ currentPage }) {
                             look no further - I'm your girl!"
                             <br />
                             <br />
+                            See my Project 3{' '}
+                            <a
+                                href='https://taste-buds.herokuapp.com/'
+                                style={{
+                                    textDecoration: 'none',
+                                }}
+                            >
+                                here!
+                            </a>{' '}
+                            <br />
+                            <a
+                                href='https://taste-buds.herokuapp.com/'
+                                style={{
+                                    textDecoration: 'none',
+                                }}
+                            >
+                                "TasteBuds,
+                            </a>
+                            where foodies become besties.""
+                            <br /> <br />
                             Avery Caldwell
                             <br />
                             Full-Stack Developer
