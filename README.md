@@ -101,7 +101,6 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 
 ### __Links 🔗__
 
-- Live URL: [https://averycaldwell.github.io/React-Portfolio/](https://averycaldwell.github.io/React-Portfolio/)
 - Github Repository: [https://github.com/AveryCaldwell/React-Portfolio](https://github.com/AveryCaldwell/React-Portfolio)
 
 <br>
