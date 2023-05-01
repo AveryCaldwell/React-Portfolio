@@ -20,7 +20,7 @@
 
 ## __Description 📝__
 
-- A single-page React portfolio of work samples for a potential employer using Material UI.
+- A single-page React portfolio of work samples for a potential employer using Material UI. 
 
 <br>
 <hr>
@@ -137,6 +137,4 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 <br>
 
 
-### __Grade🗄️__ 
 
-- 100/100
