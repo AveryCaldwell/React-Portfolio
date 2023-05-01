@@ -4,13 +4,22 @@ import * as IconsMaterial from '@mui/icons-material';
 // project images
 import imageWYW from '../img/WYW.png';
 import imageCC from '../img/CC.png';
-import imageWork from '../img/work.png';
+import imageBuds from '../img/buds.png';
 import imageEmployee from '../img/employee.png';
 import imageTeam from '../img/team.png';
 import imageWeather from '../img/weather.png';
 
 // project images
 const itemData = [
+    {
+        img: imageBuds,
+        link: 'https://taste-buds.herokuapp.com/',
+        repo: 'https://github.com/AveryCaldwell/TasteBuds',
+        title: 'TasteBuds',
+        rows: 2,
+        cols: 2,
+        featured: true,
+    },
     {
         img: imageWYW,
         link: 'https://averycaldwell.github.io/WearYouWander/',
@@ -26,12 +35,6 @@ const itemData = [
         link: 'https://averycaldwell.github.io/CheersCheck/',
         repo: 'https://github.com/AveryCaldwell/CheersCheck',
         featured: true,
-    },
-    {
-        img: imageWork,
-        link: 'https://averycaldwell.github.io/work-Day-Scheduler//',
-        repo: 'https://github.com/AveryCaldwell/work-Day-Scheduler',
-        title: 'Work Day Scheduler',
     },
     {
         img: imageEmployee,
